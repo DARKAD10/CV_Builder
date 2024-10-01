@@ -1,0 +1,157 @@
+Sure! Here’s the updated CSS without comments:
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.experience-form {
+  padding-top: 155px;
+}
+
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 45px;
+  padding-top: 55px;
+  margin-bottom: 65px;
+  margin-top: -165px;
+}
+
+.job-info-group,
+.job-location-group,
+.job-dates-group,
+.job-description-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.job-info-group div,
+.job-location-group div,
+.job-dates-group div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 300px;
+}
+
+.job-info-group label,
+.job-location-group label,
+.job-dates-group label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.job-info-group input[type="text"],
+.job-location-group input[type="text"],
+.job-dates-group input[type="date"],
+.job-description-section textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #c7ca16;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.job-title-section,
+.start-date-section {
+  padding-left: 0;
+}
+
+.employer-section {
+  margin-left: 0;
+}
+
+.job-location-group {
+  margin-top: -12px;
+}
+
+.job-description-group {
+  justify-content: center;
+}
+
+.job-description-section {
+  flex: 1;
+}
+
+.job-description-section textarea {
+  min-height: 100px;
+  max-height: 500px;
+  resize: vertical;
+}
+
+.experience-button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.experience-button-group button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+  width: 150px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.experience-button-group button:hover {
+  background-color: #21b300;
+  transform: translateY(-2px);
+}
+
+.experience-button-group button:focus {
+  outline: none;
+}
+
+@media (max-width: 1024px) {
+  .job-info-group,
+  .job-location-group,
+  .job-dates-group {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .job-info-group input,
+  .job-location-group input,
+  .job-dates-group input {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  .job-description-group {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  .job-info-group input,
+  .job-location-group input,
+  .job-dates-group input {
+    width: 100%;
+  }
+
+  .experience-button-group button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

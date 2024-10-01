@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Top from './Components/Header';
+import PersonalInfo from './Components/Personalinfo';
 
-function App() {
+import Expss from './Components/Exp';
+import Educate from './Components/Education';
+import CVPre from './Components/Cvpreview';
+
+export default function App() {
+  const[cvdata ,setCvData] =useState({
+    personalInfo: {},
+    education : {},
+    experience: {}
+  });
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ 
+     <Routes>
+     
+        <Route path="/" element={<Top />} /> 
+      
+    
+        <Route path="/personal-info" element={<PersonalInfo  cvData={cvdata}  setCvData={setCvData}/>} />   
+
+       <Route path="/Exp" element={<Expss  cvData={cvdata} setCvData={setCvData} />} />
+
+       <Route path='/Education' element ={<Educate  cvData={cvdata}   setCvData={setCvData}/>} />
+       
+     <Route path='/Pre'  element={<CVPre  cvData={cvdata} />} />
+
+    </Routes> 
   );
 }
-
-export default App;
