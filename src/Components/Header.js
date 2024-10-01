@@ -2,14 +2,13 @@
  import './CSS/header.css';
  
  import backImage from './Photos/back.jpg';
- import PersonalInfo from './Personalinfo';
-import { useState } from 'react';
+
 import { useNavigate } from 'react-router-dom';
 
 
 
  export default function Top(){
-   const [showPersonalInfo , setShowPersonalInfo] = useState(true);
+  
    const navigate = useNavigate ();
 
    function handleCV () {

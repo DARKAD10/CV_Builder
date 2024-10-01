@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
-import Top from './Components/Header';
-import PersonalInfo from './Components/Personalinfo';
+
+
 
 import App from './app';
 
